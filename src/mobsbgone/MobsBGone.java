@@ -10,20 +10,17 @@ public class MobsBGone extends JavaPlugin implements Listener {
 
     @Override
     public void onEnable() {
-        // TODO Insert logic to be performed when the plugin is enabled
         getLogger().info("MobsBGone has been enabled!");
         getServer().getPluginManager().registerEvents(this, this);
     }
     
     @Override
     public void onDisable() {
-        // TODO Insert logic to be performed when the plugin is disabled
         getLogger().info("MobsBGone has been disabled!");
     }
     
     @EventHandler
     public void onSpawn(CreatureSpawnEvent event) {
-        //placeholder
         if (event.getEntityType() == EntityType.PHANTOM) {
             event.setCancelled(true);
         }
